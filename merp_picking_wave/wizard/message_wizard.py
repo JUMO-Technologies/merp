@@ -5,7 +5,7 @@ from odoo import models, fields as oe_fields, api, _
 
 
 class MessageWizard(models.TransientModel):
-    _name = 'message.wizard'
+    _name = 'merp.message.wizard'
     _description = 'Message Wizard'
     
     message = oe_fields.Text()
@@ -24,7 +24,7 @@ class MessageWizard(models.TransientModel):
             'type': 'ir.actions.act_window',
             'view_type': 'form',
             'view_mode': 'form',
-            'res_model': 'message.wizard',
+            'res_model': 'merp.message.wizard',
             'views': [(view.id, 'form')],
             'view_id': view.id,
             'target': 'new',

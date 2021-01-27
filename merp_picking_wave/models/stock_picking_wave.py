@@ -8,7 +8,7 @@ class PickingWave(models.Model):
     _inherit = 'stock.picking.batch'
 
     def done_outgoing(self):
-        message_obj = self.env['message.wizard']
+        message_obj = self.env['merp.message.wizard']
         behavior = self.env.user.company_id.outgoing_wave_behavior_on_confirm
         remove_not_moved = self.env.user.company_id.outgoing_wave_remove_not_moved
         if int(behavior) in (0, 1):
